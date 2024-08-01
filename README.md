@@ -29,6 +29,7 @@ Projeto para prática de desenvolvimento web Front-end, utilizando HTML, CSS e J
 
 - Metodologia BEM,
 - Ícones de biblioteca externa;
+- Manipulação do DOM através de seletores JavaScript;
 - Responsivo.
 
 ## How to use
