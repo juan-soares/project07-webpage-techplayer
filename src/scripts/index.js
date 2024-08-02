@@ -15,7 +15,7 @@ const tracklist = [
     title: "Back-End",
     original: "Requiem - Mozart",
     track: "./public/assets/tracks/backend.mp3",
-    feat: "Java, Node.js & Phyton.",
+    feat: "Java, Node.js & Python.",
   },
   {
     title: "Back-End Remix",
@@ -33,43 +33,45 @@ const btnBackward = document.getElementById("btn-backward");
 const btnPlayPause = document.getElementById("btn-play-pause");
 const btnForward = document.getElementById("btn-forward");
 
-let actualTrack = 0;
+let actualTrackIndex = 0;
 
 function updateTrackInfo() {
-  h1TrackTitle.textContent = tracklist[actualTrack].title;
-  h2TrackOriginal.textContent = tracklist[actualTrack].original;
-  spanFeat.textContent = tracklist[actualTrack].feat;
-  audioPlayer.src = tracklist[actualTrack].track;
+  const actualTrackInfo = tracklist[actualTrackIndex];
+  h1TrackTitle.textContent = actualTrackInfo.title;
+  h2TrackOriginal.textContent = actualTrackInfo.original;
+  spanFeat.textContent = actualTrackInfo.feat;
+  audioPlayer.src = actualTrackInfo.track;
+
+  const updateButtonStates = () => {
+    btnBackward.disabled = actualTrackIndex === 0;
+    btnForward.disabled = actualTrackIndex === tracklist.length - 1;
+  };
+
+  updateButtonStates();
 }
 
 function playTrack() {
-  btnPlayPause.children[0].classList.remove("fa-play");
-  btnPlayPause.children[0].classList.add("fa-pause");
+  btnPlayPause.children[0].classList.replace("fa-play", "fa-pause");
   audioPlayer.play();
 }
 
 function pauseTrack() {
-  btnPlayPause.children[0].classList.remove("fa-pause");
-  btnPlayPause.children[0].classList.add("fa-play");
+  btnPlayPause.children[0].classList.replace("fa-pause", "fa-play");
   audioPlayer.pause();
 }
 
 function toggleReproduction() {
-  if (audioPlayer.paused) {
-    playTrack();
-  } else {
-    pauseTrack();
-  }
+  audioPlayer.paused ? playTrack() : pauseTrack();
 }
 
 function forwardTrack() {
-  actualTrack++;
+  actualTrackIndex++;
   updateTrackInfo();
   playTrack();
 }
 
 function backwardTrack() {
-  actualTrack--;
+  actualTrackIndex--;
   updateTrackInfo();
   playTrack();
 }
@@ -77,3 +79,5 @@ function backwardTrack() {
 btnPlayPause.addEventListener("click", toggleReproduction);
 btnForward.addEventListener("click", forwardTrack);
 btnBackward.addEventListener("click", backwardTrack);
+
+updateTrackInfo();
