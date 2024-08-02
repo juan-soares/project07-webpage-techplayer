@@ -1,3 +1,4 @@
+// Dataset
 const tracklist = [
   {
     title: "Front-End",
@@ -25,6 +26,7 @@ const tracklist = [
   },
 ];
 
+// DOM Elements
 const h1TrackTitle = document.getElementById("track-title");
 const h2TrackOriginal = document.getElementById("track-original");
 const spanFeat = document.getElementById("track-feat");
@@ -33,6 +35,7 @@ const btnBackward = document.getElementById("btn-backward");
 const btnPlayPause = document.getElementById("btn-play-pause");
 const btnForward = document.getElementById("btn-forward");
 
+// Functions & Logic
 let actualTrackIndex = 0;
 
 function updateTrackInfo() {
@@ -76,8 +79,10 @@ function backwardTrack() {
   playTrack();
 }
 
+// Event Listeners
 btnPlayPause.addEventListener("click", toggleReproduction);
 btnForward.addEventListener("click", forwardTrack);
 btnBackward.addEventListener("click", backwardTrack);
 
+// Initializer
 updateTrackInfo();
