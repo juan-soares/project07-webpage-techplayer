@@ -1,0 +1,22 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button:nth-of-type(2) {
+  border-radius: 50%;
+}
+
+.buttons button {
+  padding: 10px;
+  width: 50px;
+}
+
+.buttons button:hover i {
+  color: var(--primary);
+}
+
+.buttons button i {
+  color: var(--color-white);
+}
