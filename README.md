@@ -15,7 +15,7 @@
 
 ## Description
 
-Projeto para prática de desenvolvimento web Front-end, utilizando HTML, CSS e JavaScript. Consiste em uma Web Page de músicas clássicas, que representam as áreas do Desenvolvimento Web, na visão do ChatGPT. Contém um player de músicas, que controla a reprodução no navegador, da melodia selecionada pelo usuário. Possui uma imagem de capa para cada faixa, que é atualizada dinamicamente conforme o usuário altera a melodia.
+Projeto para prática de desenvolvimento web Front-end, utilizando HTML, CSS e JavaScript. Consiste em uma Web Page de músicas clássicas, que representam as áreas do Desenvolvimento Web, na visão do ChatGPT. Contém um reprodutor de músicas que controla a reprodução das faixas no navegador, conforme seleção do usuário. Cada faixa possui uma imagem de capa e Informações exclusivas, que são atualizados dinamicamente conforme as músicas são alteradas.
 
 ## Demo
 
@@ -27,10 +27,11 @@ Projeto para prática de desenvolvimento web Front-end, utilizando HTML, CSS e J
 
 ## Features
 
-- Metodologia BEM,
-- Ícones de biblioteca externa;
-- Manipulação do DOM através de seletores JavaScript;
-- Responsivo.
+- Ícones de biblioteca externa (Font Awesome),
+- Manipulação do DOM com seletores JavaScript;
+- Reprodutor de áudio com controle de faixa;
+- Estilização de botões dinâmicos com pseudo-classes;
+- Design responsivo.
 
 ## How to use
 

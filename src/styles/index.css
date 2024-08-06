@@ -13,6 +13,10 @@
   width: 50px;
 }
 
+.buttons button:disabled {
+  visibility: hidden;
+}
+
 .buttons button:hover i {
   color: var(--primary);
 }
